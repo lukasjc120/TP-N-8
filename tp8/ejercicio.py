@@ -4,8 +4,19 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Configuración de la página
+# Configuración de la página (DEBE ser lo primero)
 st.set_page_config(page_title="Dashboard de Ventas", layout="wide")
+
+# Datos del empleado
+legajo = "58736"
+nombre = "Lucas David Juarez Hindi"
+comision = "C5"
+
+# Barra lateral: mostrar los datos del empleado
+st.sidebar.title("Datos del Empleado")
+st.sidebar.write(f"**Legajo**: {legajo}")
+st.sidebar.write(f"**Nombre**: {nombre}")
+st.sidebar.write(f"**Comisión**: {comision}")
 
 # Función para cargar los datos
 @st.cache_data
